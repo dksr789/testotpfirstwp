@@ -8,11 +8,7 @@ const app = express();
 const port = 3000;
 
 // Middleware to parse JSON bodies
-app.use(cors({
-    origin: 'https://test.abchometuition.in', // Allow requests from your frontend URL
-    methods: ['GET', 'POST'], // Specify the allowed methods
-    allowedHeaders: ['Content-Type', 'Authorization'] // Specify the allowed headers
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
